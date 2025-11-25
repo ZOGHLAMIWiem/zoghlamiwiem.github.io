@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wiem Zoghlami – IT & Network Engineer (Junior)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Wiem Zoghlami – Junior IT & Network Engineer, cybersecurity & web development." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #2848d4;
+      --bg-soft: #8484cd8d;
+      --accent: #1f044e;
+      --accent-soft: rgba(136, 67, 255, 0.15);
+      --accent-strong: #5e1c32;
+      --text: #f9fafb;
+      --text-muted: #ffffff;
+      --border-soft: rgba(148, 163, 184, 0.25);
+      --card-radius: 18px;
+      --shadow-soft: 0 18px 40px rgba(22, 53, 128, 0.7);
+      --shadow-light: 0 0 40px rgba(124, 58, 237, 0.25);
+      --chip-bg: rgba(148, 163, 184, 0.045);
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #153780 0, #3c4d98 45%, #80218d 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+  .brand-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text strong {
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      border-color: rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .primary-btn {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(129, 140, 248, 0.4), rgba(81, 21, 78, 0.744)) #91177f;
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 14px 30px rgba(129, 140, 248, 0.45);
+      border-color: rgba(196, 181, 253, 0.8);
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 28px;
+      align-items: center;
+      padding: 40px 0 32px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e;
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #a855f7, #4f46e5, #09deff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      max-width: 34rem;
+      font-size: 0.98rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      background: var(--chip-bg);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      color: var(--text-muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .ghost-btn {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .ghost-btn:hover {
+      color: var(--text);
+      border-color: rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .ghost-btn span {
+      font-size: 1.1rem;
+    }
+
+    /* HERO RIGHT CARD */
+    .hero-card {
+      border-radius: 24px;
+      background: radial-gradient(circle at top, #111827, #020617);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 10% 0, rgba(129, 140, 248, 0.25), transparent 55%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+.hero-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: var(--shadow-light);
+  border: 2px solid rgba(148, 163, 184, 0.8);
+}
+
+    .hero-card-title small {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-title h2 {
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+
+    .hero-card-pill {
+      font-size: 0.76rem;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(117, 171, 9, 0.789);
+      color: #bbf7d0;
+      border: 1px solid rgba(34, 197, 94, 0.5);
+    }
+
+    .hero-card-body {
+      position: relative;
+      z-index: 1;
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top, var(--accent-soft), rgba(15, 23, 42, 0.95));
+      padding: 14px 14px 12px;
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .stat-card {
+      border-radius: 14px;
+      padding: 8px 9px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.8rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.7rem;
+    }
+
+    .stat-value {
+      font-weight: 500;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.75rem;
+      margin-bottom: 4px;
+    }
+
+    .chip {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: #e5e7eb;
+    }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .dot-pulse {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .dot-pulse span {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.4; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* SECTIONS GENERAL */
+    section {
+      margin-top: 36px;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .section-title span {
+      color: var(--accent-strong);
+    }
+
+    .section-description {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 36rem;
+      margin-top: 4px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    .skill-card {
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border-soft);
+      background: var(--bg-soft);
+      padding: 12px 12px 10px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
+      font-size: 0.85rem;
+    }
+
+    .skill-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-pill {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.7fr) minmax(0, 1.4fr);
+      gap: 14px;
+    }
+
+    .project-card {
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top left, var(--accent-soft), #020617);
+      box-shadow: var(--shadow-soft);
+      padding: 12px 12px 10px;
+      font-size: 0.84rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .project-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .project-card h3 {
+      font-size: 0.98rem;
+      margin-top: 2px;
+    }
+
+    .project-meta {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+      margin-bottom: 3px;
+    }
+
+    .project-tags span {
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(30, 64, 175, 0.35);
+      border: 1px solid rgba(191, 219, 254, 0.4);
+      font-size: 0.7rem;
+    }
+
+    /* EXPERIENCE & EDUCATION */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .timeline-card {
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border-soft);
+      background: var(--bg-soft);
+      padding: 12px 12px 10px;
+      font-size: 0.84rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.12), transparent 60%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .timeline-title {
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .timeline-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .timeline-dates {
+      font-size: 0.76rem;
+      color: var(--accent-strong);
+      margin-bottom: 4px;
+    }
+
+    .timeline ul {
+      margin-left: 16px;
+      margin-top: 4px;
+    }
+
+    .timeline li {
+      margin-bottom: 3px;
+    }
+
+    /* CONTACT */
+    .contact-card {
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top, var(--accent-soft), #020617);
+      padding: 16px 14px 14px;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+      gap: 16px;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .contact-list li + li {
+      margin-top: 4px;
+    }
+
+    .contact-label {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 2px;
+    }
+
+    .chip-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.78rem;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-wrapper {
+        padding-inline: 14px;
+      }
+
+      .hero-title {
+        font-size: 1.9rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+<img src="wiwi.png" alt="Wiem Zoghlami" class="brand-photo">
+        <div class="brand-text">
+          <strong>Wiem&nbsp;Zoghlami</strong>
+          <span>IT & Network Engineer (Junior)</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="primary-btn">Hire me</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="page-wrapper">
+      <!-- HERO -->
+      <section class="hero" id="about">
+        <div>
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            <span>Available in Portugal · Feb–Jul 2026</span>
+          </div>
+          <h1 class="hero-title">
+            Junior <span>IT & Network Engineer</span> with a passion for security & support.
+          </h1>
+          <p class="hero-subtitle">
+            I’m <strong>Wiem Zoghlami</strong>, a Tunisian IT engineering student with hands-on experience
+            in <strong>computer networks</strong>, <strong>cybersecurity (SOC)</strong>, and
+            <strong>web development</strong>. I thrive in international environments and love turning
+            complex technical problems into simple, reliable solutions.
+          </p>
+          <div class="hero-badges">
+            <span class="badge">Networks & Routing</span>
+            <span class="badge">SOC / Security Monitoring</span>
+            <span class="badge">Technical Support</span>
+            <span class="badge">Web Development (PHP)</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="primary-btn">View my projects</a>
+            <a href="#contact" class="ghost-btn">
+              <span>✉</span> Contact me
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-header">
+            <div style="display:flex;align-items:center;gap:10px;">
+<img src="wiem.jpg" alt="Wiem Zoghlami" class="hero-avatar" />
+              <div class="hero-card-title">
+                <small>Profile Snapshot</small>
+                <h2>Tech + Security + Support</h2>
+              </div>
+            </div>
+            <div class="hero-card-pill">Open to roles</div>
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-card-grid">
+              <div class="stat-card">
+                <div class="stat-label">Background</div>
+                <div class="stat-value">IT Engineering student</div>
+                <div class="stat-label">Bachelor in IT · ISET Radès</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Focus Areas</div>
+                <div class="stat-value">Networks · SOC · Web</div>
+              </div>
+            </div>
+            <div class="chip-row">
+              <span class="chip">VLANs, OSPF, ACL/NAT</span>
+              <span class="chip">Suricata / Snort</span>
+              <span class="chip">Graylog · Grafana</span>
+              <span class="chip">pfSense · VMs</span>
+            </div>
+            <div class="chip-row">
+              <span class="chip">HTML · CSS · JS · PHP</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Customer Support</span>
+            </div>
+            <div class="hero-card-footer">
+              <div class="dot-pulse">
+                <span></span>
+                <div>Currently preparing Erasmus mobility to Portugal</div>
+              </div>
+              <div>
+                EN · FR · AR · <span style="opacity:0.8;">ES (basic)</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="section-header">
+          <div class="section-kicker">Skills</div>
+          <h2 class="section-title">Technical & <span>Soft Skills</span></h2>
+          <p class="section-description">
+            A mix of networking, security, web development, and communication skills built through academic
+            projects, internships, and international experiences.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Networking & Infrastructure</h3>
+            <div class="skill-list">
+              <span class="skill-pill">VLANs & Sub-interfaces</span>
+              <span class="skill-pill">OSPF · RIP</span>
+              <span class="skill-pill">Static Routing</span>
+              <span class="skill-pill">ACL · NAT · PAT</span>
+              <span class="skill-pill">DHCP · DNS</span>
+              <span class="skill-pill">Cisco · Huawei basics</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Security & SOC</h3>
+            <div class="skill-list">
+              <span class="skill-pill">Suricata / Snort</span>
+              <span class="skill-pill">pfSense firewall</span>
+              <span class="skill-pill">Graylog</span>
+              <span class="skill-pill">Elasticsearch</span>
+              <span class="skill-pill">Grafana</span>
+              <span class="skill-pill">Virtual Machines</span>
+              <span class="skill-pill">Log analysis</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Web Development</h3>
+            <div class="skill-list">
+              <span class="skill-pill">HTML · CSS</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">PHP (modular)</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">Authentication</span>
+              <span class="skill-pill">Admin dashboards</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Soft Skills & Languages</h3>
+            <div class="skill-list">
+              <span class="skill-pill">Customer service</span>
+              <span class="skill-pill">Problem-solving</span>
+              <span class="skill-pill">Teamwork & leadership</span>
+              <span class="skill-pill">Adaptability</span>
+              <span class="skill-pill">EN · FR · AR · ES (basic)</span>
+              <span class="skill-pill">International mindset</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-header">
+          <div class="section-kicker">Projects</div>
+          <h2 class="section-title">Hands-on <span>Experience</span></h2>
+          <p class="section-description">
+            A selection of academic and personal projects that combine networking, cybersecurity, and web
+            development.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- SOC PROJECT -->
+          <article class="project-card">
+            <div class="project-label">Security · Final Year Project</div>
+            <h3>Mini-SOC (Security Operations Center)</h3>
+            <div class="project-meta">
+              Open-source tools to monitor, detect, and visualize suspicious network activity.
+            </div>
+            <div class="project-tags">
+              <span>Suricata / Snort</span>
+              <span>Graylog</span>
+              <span>Elasticsearch</span>
+              <span>Grafana</span>
+              <span>pfSense</span>
+            </div>
+            <p>
+              Implemented a mini SOC using virtual machines, IDS/IPS rules, firewall policies,
+              and centralized logging. Built dashboards to track alerts and traffic patterns, and documented
+              attack scenarios and remediation steps.
+            </p>
+          </article>
+
+          <!-- WAN PROJECT -->
+          <article class="project-card">
+            <div class="project-label">Networking · Internship</div>
+            <h3>WAN Network for Enterprise Services</h3>
+            <div class="project-meta">
+              Internship at the National Computing Center, designing and configuring a WAN with dynamic routing.
+            </div>
+            <div class="project-tags">
+              <span>VLANs</span>
+              <span>OSPF</span>
+              <span>ACL / NAT</span>
+              <span>DHCP · DNS</span>
+            </div>
+            <p>
+              Designed a network connecting two routers via a serial link, each linked to switches and segmented
+              into VLANs for employees, accounting, and management. Ensured connectivity, security, and clear
+              documentation of the topology.
+            </p>
+          </article>
+
+          <!-- WEB PROJECT -->
+          <article class="project-card">
+            <div class="project-label">Web · Personal Project</div>
+            <h3>Community Web Application</h3>
+            <div class="project-meta">
+              Multi-page platform for a passion-based community with forums, events and admin tools.
+            </div>
+            <div class="project-tags">
+              <span>HTML · CSS · JS</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+            </div>
+            <p>
+              Built a web app with user registration, login, discussion forums, events, and an admin panel.
+              Implemented a co-admin role with permissions to manage content and members, and organized the PHP
+              code into reusable components.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE & EDUCATION -->
+      <section id="experience">
+        <div class="section-header">
+          <div class="section-kicker">Background</div>
+          <h2 class="section-title">Experience & <span>Education</span></h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="timeline-dates">2024 – ongoing</div>
+            <div class="timeline-title">Engineering Cycle – Computer Science</div>
+            <div class="timeline-subtitle">MIT Polytech · Tunisia</div>
+            <ul>
+              <li>Advanced topics in networking, systems, and software.</li>
+              <li>Vice-President of Enactus, leading student projects.</li>
+              <li>Preparing Erasmus mobility to Portugal (IPCB, 2026).</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-dates">2021 – 2024</div>
+            <div class="timeline-title">Bachelor’s in Information Technology</div>
+            <div class="timeline-subtitle">ISET Radès · Tunisia</div>
+            <ul>
+              <li>Specialized in computer networks and systems administration.</li>
+              <li>Final year project: implementation of a mini Security Operations Center.</li>
+              <li>Hands-on labs with routing, switching and basic security.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-dates">2023</div>
+            <div class="timeline-title">Erasmus+ Mobility – IT Studies</div>
+            <div class="timeline-subtitle">University of Piraeus · Greece</div>
+            <ul>
+              <li>Studied with international students from various countries.</li>
+              <li>Improved communication, adaptability, and independence.</li>
+              <li>Strengthened love for multicultural and European environments.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-dates">Customer Service · Part-time</div>
+            <div class="timeline-title">Active Contact · Tunisia</div>
+            <div class="timeline-subtitle">Customer Service Agent</div>
+            <ul>
+              <li>Handled customer inquiries professionally and efficiently.</li>
+              <li>Developed strong communication and problem-solving skills.</li>
+              <li>Experience directly relevant to IT support environments.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s <span>Work Together</span></h2>
+          <p class="section-description">
+            Open to internships and full-time roles in IT support, networking, and cybersecurity in Portugal,
+            especially opportunities that can lead to a long-term collaboration.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div>
+            <p>
+              If my profile matches what you’re looking for, I would be happy to discuss how I can contribute
+              to your team. I’m particularly interested in roles that combine technical work, troubleshooting,
+              and interaction with users.
+            </p>
+            <p>
+              I’m available in <strong>Portugal from February 2026</strong> and open to both internships and
+              junior positions.
+            </p>
+          </div>
+          <div>
+            <ul class="contact-list">
+              <li>
+                <div class="contact-label">Email</div>
+                <div>📧 <a href="mailto:zoghlamiwiiem@gmail.com">zoghlamiwiiem@gmail.com</a></div>
+              </li>
+
+                <li>
+    <div class="contact-label">LinkedIn</div>
+    <div>💼 
+      <a href="https://www.linkedin.com/in/wi-zgh/" target="_blank" rel="noopener">
+        linkedin.com/in/wi-zgh
+      </a>
+    </div>
+  </li>
+
+              <li>
+                <div class="contact-label">Location</div>
+                <div>🌍 Tunisia → Castelo Branco, Portugal (Erasmus Feb–Jul 2026)</div>
+              </li>
+              <li>
+                <div class="contact-label">Languages</div>
+                <div class="chip-inline">
+                  <span>Arabic (native)</span>
+                  <span>English (fluent)</span>
+                  <span>French (fluent)</span>
+                  <span>Spanish (basic)</span>
+                </div>
+              </li>
+              <li style="margin-top:6px;">
+                <div class="contact-label">Next step</div>
+                <div>📎 CV & references available on request</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> · Designed by Wiem Zoghlami · Built with love for networks, security & people.
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
