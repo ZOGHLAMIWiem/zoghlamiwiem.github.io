@@ -565,6 +565,71 @@
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
       gap: 16px;
     }
+    .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.82rem;
+}
+
+.form-row label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(209, 213, 219, 0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(196, 181, 253, 0.9);
+  box-shadow: 0 0 0 1px rgba(196, 181, 253, 0.8);
+}
+
+.submit-btn {
+  margin-top: 4px;
+  align-self: flex-start;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(129, 140, 248, 0.6);
+  background: radial-gradient(circle at 0 0, rgba(129, 140, 248, 0.5), rgba(145, 23, 127, 0.8));
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 14px 30px rgba(129, 140, 248, 0.5);
+  border-color: rgba(196, 181, 253, 0.9);
+}
+
 
     .contact-card p {
       color: var(--text-muted);
@@ -936,34 +1001,28 @@
       </section>
 
       <!-- CONTACT -->
-      <section id="contact">
-        <div class="section-header">
-          <div class="section-kicker">Contact</div>
-          <h2 class="section-title">Let’s <span>Work Together</span></h2>
-          <p class="section-description">
-            Open to internships and full-time roles in IT support, networking, and cybersecurity in Portugal,
-            especially opportunities that can lead to a long-term collaboration.
-          </p>
+       <section id="contact">
+          <div>
+      <form class="contact-form" action="https://formspree.io/f/mangpzza" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="your name " required>
         </div>
 
-        <div class="contact-card">
-          <div>
-            <p>
-              If my profile matches what you’re looking for, I would be happy to discuss how I can contribute
-              to your team. I’m particularly interested in roles that combine technical work, troubleshooting,
-              and interaction with users.
-            </p>
-            <p>
-              I’m available in <strong>Portugal from February 2026</strong> and open to both internships and
-              junior positions.
-            </p>
-          </div>
-          <div>
-            <ul class="contact-list">
-              <li>
-                <div class="contact-label">Email</div>
-                <div>📧 <a href="mailto:zoghlamiwiiem@gmail.com">zoghlamiwiiem@gmail.com</a></div>
-              </li>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="_replyto" type="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send message</button>
+      </form>
+    </div>
+
 
                 <li>
     <div class="contact-label">LinkedIn</div>
