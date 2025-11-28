@@ -11,18 +11,18 @@
 
   <style>
     :root {
-      --bg: #2848d4;
-      --bg-soft: #8484cd8d;
-      --accent: #1f044e;
-      --accent-soft: rgba(136, 67, 255, 0.15);
-      --accent-strong: #5e1c32;
-      --text: #f9fafb;
-      --text-muted: #ffffff;
-      --border-soft: rgba(148, 163, 184, 0.25);
+      --bg: #020617;              /* main page background */
+      --bg-soft: #020617;         /* card background base */
+      --accent: #4f46e5;          /* indigo accent */
+      --accent-soft: rgba(79, 70, 229, 0.18);
+      --accent-strong: #22d3ee;   /* cyan highlight */
+      --text: #e5e7eb;            /* main text */
+      --text-muted: #9ca3af;      /* softer text */
+      --border-soft: rgba(148, 163, 184, 0.35);
       --card-radius: 18px;
-      --shadow-soft: 0 18px 40px rgba(22, 53, 128, 0.7);
-      --shadow-light: 0 0 40px rgba(124, 58, 237, 0.25);
-      --chip-bg: rgba(148, 163, 184, 0.045);
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+      --shadow-light: 0 0 40px rgba(56, 189, 248, 0.35);
+      --chip-bg: rgba(15, 23, 42, 0.9);
       --transition: all 0.25s ease;
     }
 
@@ -34,7 +34,7 @@
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #153780 0, #3c4d98 45%, #80218d 100%);
+      background: radial-gradient(circle at top, #0b1120 0, #020617 50%, #000 100%);
       color: var(--text);
       line-height: 1.6;
       min-height: 100vh;
@@ -78,16 +78,15 @@
       gap: 10px;
     }
 
-  .brand-photo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
+    .brand-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
     .brand-text {
       display: flex;
@@ -129,20 +128,20 @@
     .primary-btn {
       padding: 8px 16px;
       border-radius: 999px;
-      border: 1px solid rgba(129, 140, 248, 0.4);
-      background: radial-gradient(circle at 0 0, rgba(129, 140, 248, 0.4), rgba(81, 21, 78, 0.744)) #91177f;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.6), rgba(79, 70, 229, 0.9));
       color: #e5e7eb;
       font-size: 0.9rem;
       font-weight: 500;
       cursor: pointer;
       transition: var(--transition);
-      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
     }
 
     .primary-btn:hover {
       transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 14px 30px rgba(129, 140, 248, 0.45);
-      border-color: rgba(196, 181, 253, 0.8);
+      box-shadow: 0 14px 30px rgba(56, 189, 248, 0.6);
+      border-color: rgba(190, 242, 255, 0.9);
     }
 
     /* HERO */
@@ -182,7 +181,7 @@
     }
 
     .hero-title span {
-      background: linear-gradient(120deg, #a855f7, #4f46e5, #09deff);
+      background: linear-gradient(120deg, #22d3ee, #4f46e5, #a855f7);
       -webkit-background-clip: text;
       color: transparent;
     }
@@ -244,7 +243,7 @@
     /* HERO RIGHT CARD */
     .hero-card {
       border-radius: 24px;
-      background: radial-gradient(circle at top, #111827, #020617);
+      background: radial-gradient(circle at top, #020617, #020617);
       border: 1px solid var(--border-soft);
       box-shadow: var(--shadow-soft);
       padding: 18px 18px 20px;
@@ -269,15 +268,16 @@
       position: relative;
       z-index: 1;
     }
-.hero-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 999px;
-  object-fit: cover;
-  object-position: center;
-  box-shadow: var(--shadow-light);
-  border: 2px solid rgba(148, 163, 184, 0.8);
-}
+
+    .hero-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: var(--shadow-light);
+      border: 2px solid rgba(148, 163, 184, 0.8);
+    }
 
     .hero-card-title small {
       text-transform: uppercase;
@@ -295,7 +295,7 @@
       font-size: 0.76rem;
       padding: 5px 9px;
       border-radius: 999px;
-      background: rgba(117, 171, 9, 0.789);
+      background: rgba(34, 197, 94, 0.12);
       color: #bbf7d0;
       border: 1px solid rgba(34, 197, 94, 0.5);
     }
@@ -305,7 +305,7 @@
       z-index: 1;
       border-radius: 18px;
       border: 1px solid rgba(148, 163, 184, 0.35);
-      background: radial-gradient(circle at top, var(--accent-soft), rgba(15, 23, 42, 0.95));
+      background: radial-gradient(circle at top, var(--accent-soft), rgba(15, 23, 42, 0.98));
       padding: 14px 14px 12px;
     }
 
@@ -425,7 +425,7 @@
       border: 1px solid var(--border-soft);
       background: var(--bg-soft);
       padding: 12px 12px 10px;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
       font-size: 0.85rem;
     }
 
@@ -496,12 +496,12 @@
     .project-tags span {
       padding: 3px 7px;
       border-radius: 999px;
-      background: rgba(30, 64, 175, 0.35);
-      border: 1px solid rgba(191, 219, 254, 0.4);
+      background: rgba(30, 64, 175, 0.55);
+      border: 1px solid rgba(191, 219, 254, 0.6);
       font-size: 0.7rem;
     }
 
-    /* EDUCATION */
+    /* EDUCATION / TIMELINE */
     .timeline {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -516,6 +516,7 @@
       font-size: 0.84rem;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
     }
 
     .timeline-card::before {
@@ -565,71 +566,6 @@
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
       gap: 16px;
     }
-    .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 0.82rem;
-}
-
-.form-row label {
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.7rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  border-radius: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  background: rgba(15, 23, 42, 0.9);
-  padding: 8px 10px;
-  font-family: inherit;
-  font-size: 0.86rem;
-  color: var(--text);
-  outline: none;
-  transition: var(--transition);
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(209, 213, 219, 0.6);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: rgba(196, 181, 253, 0.9);
-  box-shadow: 0 0 0 1px rgba(196, 181, 253, 0.8);
-}
-
-.submit-btn {
-  margin-top: 4px;
-  align-self: flex-start;
-  padding: 8px 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(129, 140, 248, 0.6);
-  background: radial-gradient(circle at 0 0, rgba(129, 140, 248, 0.5), rgba(145, 23, 127, 0.8));
-  color: #e5e7eb;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: var(--transition);
-  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
-}
-
-.submit-btn:hover {
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 0 14px 30px rgba(129, 140, 248, 0.5);
-  border-color: rgba(196, 181, 253, 0.9);
-}
-
 
     .contact-card p {
       color: var(--text-muted);
@@ -640,6 +576,7 @@
     .contact-list {
       list-style: none;
       font-size: 0.9rem;
+      margin-top: 10px;
     }
 
     .contact-list li + li {
@@ -663,6 +600,71 @@
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(148, 163, 184, 0.4);
       font-size: 0.78rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.82rem;
+    }
+
+    .form-row label {
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 0.86rem;
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(209, 213, 219, 0.6);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: rgba(196, 181, 253, 0.9);
+      box-shadow: 0 0 0 1px rgba(196, 181, 253, 0.8);
+    }
+
+    .submit-btn {
+      margin-top: 4px;
+      align-self: flex-start;
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.6);
+      background: radial-gradient(circle at 0 0, rgba(129, 140, 248, 0.5), rgba(145, 23, 127, 0.8));
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 14px 30px rgba(129, 140, 248, 0.5);
+      border-color: rgba(196, 181, 253, 0.9);
     }
 
     footer {
@@ -704,14 +706,13 @@
         font-size: 1.9rem;
       }
     }
-
   </style>
 </head>
 <body>
   <header>
     <div class="nav-inner">
       <a href="#top" class="brand">
-<img src="wiwi.png" alt="Wiem Zoghlami" class="brand-photo">
+        <img src="wiwi.png" alt="Wiem Zoghlami" class="brand-photo">
         <div class="brand-text">
           <strong>Wiem&nbsp;Zoghlami</strong>
           <span>IT & Network Engineer (Junior)</span>
@@ -765,7 +766,7 @@
         <aside class="hero-card">
           <div class="hero-card-header">
             <div style="display:flex;align-items:center;gap:10px;">
-<img src="wiem.jpg" alt="Wiem Zoghlami" class="hero-avatar" />
+              <img src="wiem.jpg" alt="Wiem Zoghlami" class="hero-avatar" />
               <div class="hero-card-title">
                 <small>Profile Snapshot</small>
                 <h2>Tech + Security + Support</h2>
@@ -946,11 +947,11 @@
         </div>
       </section>
 
-      <!--  EDUCATION -->
-      <section id="Education">
+      <!-- EDUCATION -->
+      <section id="education">
         <div class="section-header">
           <div class="section-kicker">Background</div>
-          <h2 class="section-title">Education</span></h2>
+          <h2 class="section-title">Education</h2>
         </div>
 
         <div class="timeline">
@@ -1001,42 +1002,49 @@
       </section>
 
       <!-- CONTACT -->
-       <section id="contact">
+      <section id="contact">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s <span>Work Together</span></h2>
+          <p class="section-description">
+            Open to internships and full-time roles in IT support, networking, and cybersecurity in Portugal,
+            especially opportunities that can lead to a long-term collaboration.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <!-- LEFT: text + info -->
           <div>
-      <form class="contact-form" action="https://formspree.io/f/mangpzza" method="POST">
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="your name " required>
-        </div>
+            <p>
+              If my profile matches what you’re looking for, I would be happy to discuss how I can contribute
+              to your team. I’m particularly interested in roles that combine technical work, troubleshooting,
+              and interaction with users.
+            </p>
+            <p>
+              I’m available in <strong>Portugal from February 2026</strong> and open to both internships and
+              junior positions.
+            </p>
 
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="_replyto" type="email" placeholder="your@email.com" required>
-        </div>
+            <ul class="contact-list">
+              <li>
+                <div class="contact-label">Email</div>
+                <div>📧 <a href="mailto:zoghlamiwiiem@gmail.com">zoghlamiwiiem@gmail.com</a></div>
+              </li>
 
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">Send message</button>
-      </form>
-    </div>
-
-
-                <li>
-    <div class="contact-label">LinkedIn</div>
-    <div>💼 
-      <a href="https://www.linkedin.com/in/wi-zgh/" target="_blank" rel="noopener">
-        linkedin.com/in/wi-zgh
-      </a>
-    </div>
-  </li>
+              <li>
+                <div class="contact-label">LinkedIn</div>
+                <div>💼 
+                  <a href="https://www.linkedin.com/in/wi-zgh/" target="_blank" rel="noopener">
+                    linkedin.com/in/wi-zgh
+                  </a>
+                </div>
+              </li>
 
               <li>
                 <div class="contact-label">Location</div>
                 <div>🌍 Tunisia → Castelo Branco, Portugal (Erasmus Feb–Jul 2026)</div>
               </li>
+
               <li>
                 <div class="contact-label">Languages</div>
                 <div class="chip-inline">
@@ -1046,11 +1054,34 @@
                   <span>Spanish (basic)</span>
                 </div>
               </li>
+
               <li style="margin-top:6px;">
                 <div class="contact-label">Next step</div>
                 <div>📎 CV & references available on request</div>
               </li>
             </ul>
+          </div>
+
+          <!-- RIGHT: form -->
+          <div>
+            <form class="contact-form" action="https://formspree.io/f/mangpzza" method="POST">
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="_replyto" type="email" placeholder="your@email.com" required>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">Send message</button>
+            </form>
           </div>
         </div>
       </section>
@@ -1067,5 +1098,3 @@
   </script>
 </body>
 </html>
-
-
