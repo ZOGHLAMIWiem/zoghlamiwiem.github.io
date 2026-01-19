@@ -10,42 +10,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #d1c4ff;                 /* overall tint */
-      --bg-soft: #e3ddff;            /* card background (soft lavender) */
-      --accent: #7c3aed;             /* purple accent */
-      --accent-soft: rgba(129, 140, 248, 0.3);
-      --accent-strong: #4c1d95;      /* deep purple */
-      --text: #020617;               /* main text */
-      --text-muted: #6b7280;         /* softer text */
-      --border-soft: rgba(148, 163, 184, 0.7);
-      --card-radius: 18px;
-      --shadow-soft: 0 18px 32px rgba(15, 23, 42, 0.55);
-      --shadow-light: 0 0 26px rgba(167, 139, 250, 0.75);
-      --chip-bg: rgba(248, 250, 252, 0.9);
-      --transition: all 0.25s ease;
-    }
+  :root {
+  /* Core */
+  --bg: #f9fafb;                /* light grey background */
+  --bg-soft: #ffffff;           /* cards */
+  --text: #0f172a;              /* almost black */
+  --text-muted: #6b7280;        /* grey text */
+
+  /* Borders & shadows */
+  --border-soft: rgba(15, 23, 42, 0.12);
+  --card-radius: 16px;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-light: 0 2px 10px rgba(15, 23, 42, 0.06);
+
+  /* Accent palette (soft) */
+  --accent-blue: #2563eb;
+  --accent-green: #16a34a;
+  --accent-yellow: #eab308;
+  --accent-pink: #db2777;
+  --accent-grey: #475569;
+
+  --transition: all 0.25s ease;
+}
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+ background-color: #ffffff !important;
+  color: #111111 !important;
+}
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top left,
-        #b39ddb 0%,     /* darker lavender */
-        #9f8df8 30%,    /* medium purple */
-        #7c3aed 60%,    /* strong purple */
-        #4338ca 80%,    /* deep indigo */
-        #111827 100%    /* dark blue-grey bottom */
-      );
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-      scroll-behavior: smooth;
-    }
 
     a {
       color: inherit;
@@ -60,29 +62,25 @@
 
     /* NAVBAR */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.96),
-        rgba(76, 29, 149, 0.95),
-        rgba(15, 23, 42, 0.0)
-      );
-      border-bottom: 1px solid rgba(191, 219, 254, 0.85);
-    }
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+}
+}
+    p, li, span, div {
+  color: #111111 !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #111111 !important;
+}
+   .nav-inner,
+nav a {
+  color: var(--text);
+}
 
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      color: #f9fafb;
-    }
 
     .brand {
       display: flex;
@@ -137,24 +135,9 @@
       background: rgba(15, 23, 42, 0.35);
     }
 
-    .primary-btn {
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(191, 219, 254, 0.95);
-      background: linear-gradient(135deg, #38bdf8, #6366f1, #ec4899);
-      color: #f9fafb;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.9);
-    }
+   
 
-    .primary-btn:hover {
-      transform: translateY(-1px) scale(1.02);
-      box-shadow: 0 18px 40px rgba(79, 70, 229, 0.9);
-      border-color: #e0f2fe;
-    }
+    
 
     /* HERO */
     .hero {
@@ -179,26 +162,23 @@
       margin-bottom: 10px;
     }
 
-    .hero-tag-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px #22c55e;
-    }
+    .hero-tag-dot,
+.dot-pulse span {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
 
     .hero-title {
-      font-size: clamp(2.1rem, 4vw, 2.7rem);
-      line-height: 1.15;
-      margin-bottom: 12px;
-      color: #f9fafb;
-    }
+  color: var(--text);
+}
 
-    .hero-title span {
-      background: linear-gradient(120deg, #22d3ee, #a855f7, #ec4899);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+.hero-title span {
+  color: var(--accent-blue);
+  background: none;
+}
+
+
 
     .hero-subtitle {
       color: #e5e7eb;
@@ -214,14 +194,14 @@
       margin-bottom: 18px;
     }
 
-    .badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      background: rgba(15, 23, 42, 0.65);
-      border: 1px solid rgba(191, 219, 254, 0.85);
-      color: #e5e7eb;
-    }
+.badge,
+.skill-pill,
+.chip {
+  background: #f1f5f9;
+  border: 1px solid var(--border-soft);
+  color: var(--text);
+}
+
 
     .hero-actions {
       display: flex;
@@ -231,19 +211,11 @@
     }
 
     .ghost-btn {
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      background: rgba(15, 23, 42, 0.7);
-      color: #e5e7eb;
-      font-size: 0.9rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: var(--transition);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
-    }
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  color: var(--text);
+}
+
 
     .ghost-btn:hover {
       color: #ffffff;
@@ -256,16 +228,17 @@
     }
 
     /* HERO RIGHT CARD */
-    .hero-card {
-      border-radius: 24px;
-      background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.7), #111827);
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      box-shadow: var(--shadow-soft);
-      padding: 18px 18px 20px;
-      position: relative;
-      overflow: hidden;
-      color: #f9fafb;
-    }
+   .hero-card,
+.skill-card,
+.project-card,
+.timeline-card,
+.contact-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  color: var(--text);
+}
+
 
     .hero-card::before {
       content: "";
@@ -359,13 +332,7 @@
       margin-bottom: 4px;
     }
 
-    .chip {
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(191, 219, 254, 0.85);
-      color: #e5e7eb;
-    }
+    
 
     .hero-card-footer {
       display: flex;
@@ -421,9 +388,10 @@
       font-weight: 600;
     }
 
-    .section-title span {
-      color: #fbb6ce;
-    }
+   .section-title span {
+  color: var(--accent-pink);
+}
+
 
     .section-description {
       font-size: 0.9rem;
@@ -439,15 +407,7 @@
       gap: 14px;
     }
 
-    .skill-card {
-      border-radius: var(--card-radius);
-      border: 1px solid var(--border-soft);
-      background: rgba(15, 23, 42, 0.96);
-      padding: 12px 12px 10px;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.85rem;
-      color: #e5e7eb;
-    }
+   
 
     .skill-card h3 {
       font-size: 0.95rem;
@@ -461,34 +421,16 @@
       gap: 6px;
     }
 
-    .skill-pill {
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(31, 41, 55, 0.95);
-      color: #e5e7eb;
-      font-size: 0.75rem;
-      border: 1px solid rgba(191, 219, 254, 0.8);
-    }
 
     /* PROJECTS */
     .projects-grid {
+       background-color: #ffffff !important;
+  color: #111111 !important;
       display: grid;
       grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.7fr) minmax(0, 1.4fr);
       gap: 14px;
     }
 
-    .project-card {
-      border-radius: var(--card-radius);
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.35), rgba(15, 23, 42, 0.98));
-      box-shadow: var(--shadow-soft);
-      padding: 12px 12px 10px;
-      font-size: 0.84rem;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      color: #e5e7eb;
-    }
 
     .project-label {
       font-size: 0.75rem;
@@ -516,33 +458,23 @@
       margin-bottom: 3px;
     }
 
-    .project-tags span {
-      padding: 3px 7px;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.8);
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      font-size: 0.7rem;
-      color: #f9fafb;
-    }
+.project-tags span {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: var(--accent-blue);
+}
+
+
 
     /* EDUCATION / TIMELINE */
     .timeline {
+       background-color: #ffffff !important;
+  color: #111111 !important;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 14px;
     }
 
-    .timeline-card {
-      border-radius: var(--card-radius);
-      border: 1px solid rgba(191, 219, 254, 0.85);
-      background: rgba(15, 23, 42, 0.96);
-      padding: 12px 12px 10px;
-      font-size: 0.84rem;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      color: #e5e7eb;
-    }
 
     .timeline-card::before {
       content: "";
@@ -565,11 +497,11 @@
       margin-bottom: 4px;
     }
 
-    .timeline-dates {
-      font-size: 0.76rem;
-      color: #bae6fd;
-      margin-bottom: 4px;
-    }
+  .timeline-dates {
+  color: var(--accent-yellow);
+  font-weight: 600;
+}
+
 
     .timeline ul {
       margin-left: 16px;
@@ -581,18 +513,7 @@
     }
 
     /* CONTACT */
-    .contact-card {
-      border-radius: var(--card-radius);
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.3), rgba(15, 23, 42, 0.98));
-      padding: 16px 14px 14px;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.9rem;
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-      gap: 16px;
-      color: #e5e7eb;
-    }
+   
 
     .contact-card p {
       color: #e5e7eb;
@@ -673,26 +594,18 @@
       box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.9);
     }
 
-    .submit-btn {
-      margin-top: 4px;
-      align-self: flex-start;
-      padding: 8px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(191, 219, 254, 0.95);
-      background: linear-gradient(135deg, #38bdf8, #6366f1, #ec4899);
-      color: #f9fafb;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
-    }
+.primary-btn,
+.submit-btn {
+  background: var(--accent-blue);
+  color: #ffffff;
+  border: none;
+}
 
-    .submit-btn:hover {
-      transform: translateY(-1px) scale(1.02);
-      box-shadow: 0 18px 40px rgba(79, 70, 229, 0.95);
-      border-color: #e0f2fe;
-    }
+.primary-btn:hover,
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
 
     footer {
       margin-top: 28px;
@@ -717,6 +630,8 @@
 
       .contact-card {
         grid-template-columns: minmax(0, 1fr);
+         background-color: #ffffff !important;
+  color: #111111 !important;
       }
 
       nav ul {
@@ -833,7 +748,7 @@
                 <div>Currently preparing Erasmus mobility to Portugal</div>
               </div>
               <div>
-                EN · FR · AR · <span style="opacity:0.8;">ES (basic)</span>
+                EN · FR · AR · <span style="opacity:0.8;">PT (basics)</span>
               </div>
             </div>
           </div>
@@ -856,6 +771,8 @@
             <h3>Networking & Infrastructure</h3>
             <div class="skill-list">
               <span class="skill-pill">VLANs & Sub-interfaces</span>
+              <span class="skill-pill">linux </span>
+
               <span class="skill-pill">OSPF · RIP</span>
               <span class="skill-pill">Static Routing</span>
               <span class="skill-pill">ACL · NAT · PAT</span>
@@ -907,7 +824,6 @@
 
       <!-- PROJECTS -->
       <section id="projects">
-
         <div class="section-header">
           <div class="section-kicker">Projects</div>
           <h2 class="section-title">Hands-on <span>Experience</span></h2>
@@ -917,6 +833,8 @@
           </p>
         </div>
            <!-- TUNISIE TELECOM PROJECT -->
+                <div class="projects-grid">
+
 <article class="project-card">
   <div class="project-label">Networking · Internship</div>
   <h3>Network Security & Wi-Fi Hardening</h3>
@@ -937,7 +855,6 @@
   </p>
 </article>
 
-        <div class="projects-grid">
           <!-- SOC PROJECT -->
           <article class="project-card">
             <div class="project-label">Security · Final Year Project</div>
@@ -1150,6 +1067,10 @@
   </script>
 </body>
 </html>
+
+
+
+
 
 
 
