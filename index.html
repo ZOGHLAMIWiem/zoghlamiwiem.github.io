@@ -11,41 +11,46 @@
 
   <style>
     :root {
-      --bg: #d1c4ff;                 /* overall tint */
-      --bg-soft: #e3ddff;            /* card background (soft lavender) */
-      --accent: #7c3aed;             /* purple accent */
-      --accent-soft: rgba(129, 140, 248, 0.3);
-      --accent-strong: #4c1d95;      /* deep purple */
-      --text: #020617;               /* main text */
-      --text-muted: #6b7280;         /* softer text */
-      --border-soft: rgba(148, 163, 184, 0.7);
-      --card-radius: 18px;
-      --shadow-soft: 0 18px 32px rgba(15, 23, 42, 0.55);
-      --shadow-light: 0 0 26px rgba(167, 139, 250, 0.75);
-      --chip-bg: rgba(248, 250, 252, 0.9);
-      --transition: all 0.25s ease;
-    }
+  /* Core */
+  --bg: #0a0a0a;                 /* deep black */
+  --bg-soft: #111111;            /* card background */
+  --text: #f5f5f5;               /* main text */
+  --text-muted: #9ca3af;         /* muted grey */
 
+  /* Borders & shadows */
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --card-radius: 18px;
+  --shadow-soft: 0 14px 28px rgba(0, 0, 0, 0.75);
+  --shadow-light: 0 0 18px rgba(255, 255, 255, 0.08);
+
+  /* Accent palette (soft & controlled) */
+  --accent-blue: #60a5fa;
+  --accent-green: #22c55e;
+  --accent-yellow: #fde68a;
+  --accent-pink: #f9a8d4;
+  --accent-grey: #d1d5db;
+
+  --transition: all 0.25s ease;
+}
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #050505 0%,
+    #0a0a0a 40%,
+    #111111 100%
+  );
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top left,
-        #b39ddb 0%,     /* darker lavender */
-        #9f8df8 30%,    /* medium purple */
-        #7c3aed 60%,    /* strong purple */
-        #4338ca 80%,    /* deep indigo */
-        #111827 100%    /* dark blue-grey bottom */
-      );
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-      scroll-behavior: smooth;
-    }
 
     a {
       color: inherit;
@@ -179,13 +184,12 @@
       margin-bottom: 10px;
     }
 
-    .hero-tag-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px #22c55e;
-    }
+    .hero-tag-dot,
+.dot-pulse span {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
 
     .hero-title {
       font-size: clamp(2.1rem, 4vw, 2.7rem);
@@ -195,10 +199,11 @@
     }
 
     .hero-title span {
-      background: linear-gradient(120deg, #22d3ee, #a855f7, #ec4899);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+  background: linear-gradient(120deg, #ffffff, var(--accent-blue));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 
     .hero-subtitle {
       color: #e5e7eb;
@@ -214,14 +219,13 @@
       margin-bottom: 18px;
     }
 
-    .badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      background: rgba(15, 23, 42, 0.65);
-      border: 1px solid rgba(191, 219, 254, 0.85);
-      color: #e5e7eb;
-    }
+   .badge,
+.chip,
+.skill-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-soft);
+  color: #e5e7eb;
+}
 
     .hero-actions {
       display: flex;
@@ -359,13 +363,7 @@
       margin-bottom: 4px;
     }
 
-    .chip {
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(191, 219, 254, 0.85);
-      color: #e5e7eb;
-    }
+    
 
     .hero-card-footer {
       display: flex;
@@ -421,9 +419,10 @@
       font-weight: 600;
     }
 
-    .section-title span {
-      color: #fbb6ce;
-    }
+   .section-title span {
+  color: var(--accent-pink);
+}
+
 
     .section-description {
       font-size: 0.9rem;
@@ -461,14 +460,6 @@
       gap: 6px;
     }
 
-    .skill-pill {
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(31, 41, 55, 0.95);
-      color: #e5e7eb;
-      font-size: 0.75rem;
-      border: 1px solid rgba(191, 219, 254, 0.8);
-    }
 
     /* PROJECTS */
     .projects-grid {
@@ -517,13 +508,11 @@
     }
 
     .project-tags span {
-      padding: 3px 7px;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.8);
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      font-size: 0.7rem;
-      color: #f9fafb;
-    }
+  background: rgba(96, 165, 250, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  color: #e5e7eb;
+}
+
 
     /* EDUCATION / TIMELINE */
     .timeline {
@@ -565,11 +554,10 @@
       margin-bottom: 4px;
     }
 
-    .timeline-dates {
-      font-size: 0.76rem;
-      color: #bae6fd;
-      margin-bottom: 4px;
-    }
+  .timeline-dates {
+  color: var(--accent-yellow);
+}
+
 
     .timeline ul {
       margin-left: 16px;
@@ -673,20 +661,13 @@
       box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.9);
     }
 
-    .submit-btn {
-      margin-top: 4px;
-      align-self: flex-start;
-      padding: 8px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(191, 219, 254, 0.95);
-      background: linear-gradient(135deg, #38bdf8, #6366f1, #ec4899);
-      color: #f9fafb;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
-    }
+   .primary-btn,
+.submit-btn {
+  background: linear-gradient(135deg, #ffffff, #d1d5db);
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
 
     .submit-btn:hover {
       transform: translateY(-1px) scale(1.02);
@@ -1152,6 +1133,7 @@
   </script>
 </body>
 </html>
+
 
 
 
