@@ -2,1075 +2,379 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Wiem Zoghlami – IT & Network Engineer (Junior)</title>
+  <title>Wiem Zoghlami | IT & Network Engineer (Junior)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Wiem Zoghlami – Junior IT & Network Engineer, cybersecurity & web development." />
+  <meta name="description" content="Wiem Zoghlami – Junior IT & Network Engineer, Networking, Cybersecurity, Erasmus Student." />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-  :root {
-  /* Core */
-  --bg: #f9fafb;                /* light grey background */
-  --bg-soft: #ffffff;           /* cards */
-  --text: #0f172a;              /* almost black */
-  --text-muted: #6b7280;        /* grey text */
-
-  /* Borders & shadows */
-  --border-soft: rgba(15, 23, 42, 0.12);
-  --card-radius: 16px;
-  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
-  --shadow-light: 0 2px 10px rgba(15, 23, 42, 0.06);
-
-  /* Accent palette (soft) */
-  --accent-blue: #2563eb;
-  --accent-green: #16a34a;
-  --accent-yellow: #eab308;
-  --accent-pink: #db2777;
-  --accent-grey: #475569;
-
-  --transition: all 0.25s ease;
-}
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e5e7eb;
+      --primary: #2563eb;
+      --accent: #16a34a;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(15,23,42,0.08);
+    }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-body {
-  font-family: "Poppins", system-ui, sans-serif;
- background-color: #ffffff !important;
-  color: #111111 !important;
-}
-  color: var(--text);
-  line-height: 1.6;
-  min-height: 100vh;
-}
 
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
     a {
-      color: inherit;
+      color: var(--primary);
       text-decoration: none;
     }
 
-    .page-wrapper {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 20px 16px 60px;
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 32px 20px 70px;
     }
 
-    /* NAVBAR */
+    /* HEADER */
     header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-soft);
-}
-}
-    p, li, span, div {
-  color: #111111 !important;
-}
-h1, h2, h3, h4, h5, h6 {
-  color: #111111 !important;
-}
-   .nav-inner,
-nav a {
-  color: var(--text);
-}
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-
-    .brand {
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 10px;
     }
 
-    .brand-photo {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    .nav strong {
+      font-weight: 700;
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text strong {
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .brand-text span {
-      font-size: 0.78rem;
-      opacity: 0.95;
-    }
-
-    nav ul {
+    .nav ul {
       list-style: none;
       display: flex;
       gap: 18px;
       font-size: 0.9rem;
     }
 
-    nav a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      color: #e5e7eb;
-      transition: var(--transition);
-      border: 1px solid transparent;
-    }
-
-    nav a:hover {
-      color: #f9fafb;
-      border-color: rgba(219, 234, 254, 0.9);
-      background: rgba(15, 23, 42, 0.35);
-    }
-
-   
-
-    
-
     /* HERO */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 28px;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
       align-items: center;
-      padding: 40px 0 32px;
-      color: #f9fafb;
     }
 
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(191, 219, 254, 0.8);
-      background: rgba(15, 23, 42, 0.75);
-      color: #e5e7eb;
-      font-size: 0.78rem;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
     }
 
-    .hero-tag-dot,
-.dot-pulse span {
-  background: var(--accent-green);
-  box-shadow: 0 0 10px var(--accent-green);
-}
-
-
-    .hero-title {
-  color: var(--text);
-}
-
-.hero-title span {
-  color: var(--accent-blue);
-  background: none;
-}
-
-
-
-    .hero-subtitle {
-      color: #e5e7eb;
-      margin-bottom: 18px;
-      max-width: 34rem;
-      font-size: 0.98rem;
+    .hero h1 span {
+      color: var(--primary);
     }
 
-    .hero-badges {
+    .hero p {
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .badges {
+      margin-top: 18px;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 18px;
     }
 
-.badge,
-.skill-pill,
-.chip {
-  background: #f1f5f9;
-  border: 1px solid var(--border-soft);
-  color: var(--text);
-}
-
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .ghost-btn {
-  background: transparent;
-  border: 1px solid var(--border-soft);
-  color: var(--text);
-}
-
-
-    .ghost-btn:hover {
-      color: #ffffff;
-      border-color: rgba(219, 234, 254, 1);
-      background: rgba(15, 23, 42, 0.95);
-    }
-
-    .ghost-btn span {
-      font-size: 1.1rem;
-    }
-
-    /* HERO RIGHT CARD */
-   .hero-card,
-.skill-card,
-.project-card,
-.timeline-card,
-.contact-card {
-  background: var(--bg-soft);
-  border: 1px solid var(--border-soft);
-  box-shadow: var(--shadow-soft);
-  color: var(--text);
-}
-
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at 10% 0, rgba(56, 189, 248, 0.45), transparent 55%);
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-avatar {
-      width: 72px;
-      height: 72px;
+    .badge {
+      background: #eff6ff;
+      color: var(--primary);
+      padding: 6px 12px;
       border-radius: 999px;
-      object-fit: cover;
-      object-position: center;
-      box-shadow: var(--shadow-light);
-      border: 2px solid rgba(254, 249, 195, 0.95);
-    }
-
-    .hero-card-title small {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.7rem;
-      color: #e5e7eb;
-    }
-
-    .hero-card-title h2 {
-      font-size: 1rem;
-      margin-top: 2px;
-      color: #f9fafb;
-    }
-
-    .hero-card-pill {
-      font-size: 0.76rem;
-      padding: 5px 9px;
-      border-radius: 999px;
-      background: rgba(22, 163, 74, 0.2);
-      color: #bbf7d0;
-      border: 1px solid rgba(34, 197, 94, 0.8);
-    }
-
-    .hero-card-body {
-      position: relative;
-      z-index: 1;
-      border-radius: 18px;
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.85));
-      padding: 14px 14px 12px;
-    }
-
-    .hero-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .stat-card {
-      border-radius: 14px;
-      padding: 8px 9px;
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      background: rgba(15, 23, 42, 0.9);
       font-size: 0.8rem;
-    }
-
-    .stat-label {
-      color: #9ca3af;
-      font-size: 0.7rem;
-    }
-
-    .stat-value {
       font-weight: 500;
-      color: #f9fafb;
     }
 
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 0.75rem;
-      margin-bottom: 4px;
+    .hero-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
 
-    
-
-    .hero-card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-top: 8px;
-      font-size: 0.76rem;
-      color: #e5e7eb;
+    .hero-card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
     }
 
-    .dot-pulse {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .dot-pulse span {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px #22c55e;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.4); opacity: 0.4; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    /* SECTIONS GENERAL */
-    section {
-      margin-top: 36px;
-    }
-
-    .section-header {
-      margin-bottom: 16px;
-      color: #f9fafb;
-    }
-
-    .section-kicker {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #cbd5f5;
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-   .section-title span {
-  color: var(--accent-pink);
-}
-
-
-    .section-description {
+    .hero-card ul {
+      list-style: none;
       font-size: 0.9rem;
-      color: #e5e7eb;
-      max-width: 36rem;
-      margin-top: 4px;
+      color: var(--muted);
     }
 
-    /* SKILLS */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-    }
-
-   
-
-    .skill-card h3 {
-      font-size: 0.95rem;
+    .hero-card li {
       margin-bottom: 6px;
-      color: #f9fafb;
     }
 
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
+    /* SECTIONS */
+    section {
+      margin-top: 70px;
     }
 
-
-    /* PROJECTS */
-    .projects-grid {
-       background-color: #ffffff !important;
-  color: #111111 !important;
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.7fr) minmax(0, 1.4fr);
-      gap: 14px;
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
     }
 
-
-    .project-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #cbd5f5;
+    section p.section-desc {
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 26px;
     }
 
-    .project-card h3 {
-      font-size: 0.98rem;
-      margin-top: 2px;
-      color: #f9fafb;
-    }
-
-    .project-meta {
-      font-size: 0.74rem;
-      color: #d1d5db;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 2px;
-      margin-bottom: 3px;
-    }
-
-.project-tags span {
-  background: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.3);
-  color: var(--accent-blue);
-}
-
-
-
-    /* EDUCATION / TIMELINE */
-    .timeline {
-       background-color: #ffffff !important;
-  color: #111111 !important;
+    /* GRID */
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
+      gap: 20px;
     }
 
-
-    .timeline-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(167, 139, 250, 0.5), transparent 60%);
-      opacity: 0.9;
-      pointer-events: none;
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
     }
 
-    .timeline-title {
-      font-size: 0.95rem;
-      margin-bottom: 2px;
-      color: #f9fafb;
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
     }
 
-    .timeline-subtitle {
+    .card small {
+      color: var(--muted);
       font-size: 0.8rem;
-      color: #d1d5db;
-      margin-bottom: 4px;
     }
 
-  .timeline-dates {
-  color: var(--accent-yellow);
-  font-weight: 600;
-}
-
-
-    .timeline ul {
-      margin-left: 16px;
-      margin-top: 4px;
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
     }
 
-    .timeline li {
-      margin-bottom: 3px;
+    .tag {
+      background: #f1f5f9;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
     }
 
     /* CONTACT */
-   
-
-    .contact-card p {
-      color: #e5e7eb;
-      font-size: 0.88rem;
-      margin-bottom: 8px;
+    .contact {
+      background: var(--card);
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
     }
-
-    .contact-list {
-      list-style: none;
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
-
-    .contact-list li + li {
-      margin-top: 4px;
-    }
-
-    .contact-label {
-      color: #cbd5f5;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 2px;
-    }
-
-    .chip-inline {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.98);
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      font-size: 0.78rem;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .form-row {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 0.82rem;
-    }
-
-    .form-row label {
-      color: #cbd5f5;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.7rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      border-radius: 10px;
-      border: 1px solid rgba(191, 219, 254, 0.9);
-      background: rgba(15, 23, 42, 0.96);
-      padding: 8px 10px;
-      font-family: inherit;
-      font-size: 0.86rem;
-      color: #f9fafb;
-      outline: none;
-      transition: var(--transition);
-    }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: rgba(156, 163, 175, 0.9);
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: rgba(129, 140, 248, 0.95);
-      box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.9);
-    }
-
-.primary-btn,
-.submit-btn {
-  background: var(--accent-blue);
-  color: #ffffff;
-  border: none;
-}
-
-.primary-btn:hover,
-.submit-btn:hover {
-  background: #1d4ed8;
-}
-
 
     footer {
-      margin-top: 28px;
-      font-size: 0.78rem;
-      color: #cbd5f5;
+      margin-top: 60px;
       text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 880px) {
+    @media (max-width: 900px) {
       .hero {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
       }
 
-      .hero-card {
-        order: -1;
-      }
-
-      .projects-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .contact-card {
-        grid-template-columns: minmax(0, 1fr);
-         background-color: #ffffff !important;
-  color: #111111 !important;
-      }
-
-      nav ul {
+      .nav ul {
         display: none;
-      }
-
-      .nav-inner {
-        justify-content: space-between;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .page-wrapper {
-        padding-inline: 14px;
-      }
-
-      .hero-title {
-        font-size: 1.9rem;
       }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav-inner">
-      <a href="#top" class="brand">
-        <img src="wiwi.png" alt="Wiem Zoghlami" class="brand-photo">
-        <div class="brand-text">
-          <strong>Wiem&nbsp;Zoghlami</strong>
-          <span>IT & Network Engineer (Junior)</span>
-        </div>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="primary-btn">Hire me</a>
-    </div>
-  </header>
 
-  <main id="top">
-    <div class="page-wrapper">
-      <!-- HERO -->
-      <section class="hero" id="about">
-        <div>
-          <div class="hero-tag">
-            <span class="hero-tag-dot"></span>
-            <span>Available in Portugal · Feb–Jul 2026</span>
-          </div>
-          <h1 class="hero-title">
-            Junior <span>IT & Network Engineer</span> with a passion for security & support.
-          </h1>
-          <p class="hero-subtitle">
-            I’m <strong>Wiem Zoghlami</strong>, a Tunisian IT engineering student with hands-on experience
-            in <strong>computer networks</strong>, <strong>cybersecurity (SOC)</strong>, and
-            <strong>web development</strong>. I thrive in international environments and love turning
-            complex technical problems into simple, reliable solutions.
-          </p>
-          <div class="hero-badges">
-            <span class="badge">Networks & Routing</span>
-            <span class="badge">SOC / Security Monitoring</span>
-            <span class="badge">Technical Support</span>
-            <span class="badge">Web Development (PHP)</span>
-          </div>
-          <div class="hero-actions">
-            <a href="#projects" class="primary-btn">View my projects</a>
-            <a href="#contact" class="ghost-btn">
-              <span>✉</span> Contact me
-            </a>
-          </div>
-        </div>
-
-        <aside class="hero-card">
-          <div class="hero-card-header">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <img src="wiem.jpg" alt="Wiem Zoghlami" class="hero-avatar" />
-              <div class="hero-card-title">
-                <small>Profile Snapshot</small>
-                <h2>Tech + Security + Support</h2>
-              </div>
-            </div>
-            <div class="hero-card-pill">Open to roles</div>
-          </div>
-          <div class="hero-card-body">
-            <div class="hero-card-grid">
-              <div class="stat-card">
-                <div class="stat-label">Background</div>
-                <div class="stat-value">IT Engineering student</div>
-                <div class="stat-label">Bachelor in IT · ISET Rades</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-label">Focus Areas</div>
-                <div class="stat-value">Networks · SOC · Web</div>
-              </div>
-            </div>
-            <div class="chip-row">
-              <span class="chip">VLANs, OSPF, ACL/NAT</span>
-              <span class="chip">Suricata / Snort</span>
-              <span class="chip">Graylog · Grafana</span>
-              <span class="chip">pfSense · VMs</span>
-            </div>
-            <div class="chip-row">
-              <span class="chip">HTML · CSS · JS · PHP</span>
-              <span class="chip">MySQL</span>
-            </div>
-            <div class="hero-card-footer">
-              <div class="dot-pulse">
-                <span></span>
-                <div>Currently preparing Erasmus mobility to Portugal</div>
-              </div>
-              <div>
-                EN · FR · AR · <span style="opacity:0.8;">PT (basics)</span>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="section-header">
-          <div class="section-kicker">Skills</div>
-          <h2 class="section-title">Technical & <span>Soft Skills</span></h2>
-          <p class="section-description">
-            A mix of networking, security, web development, and communication skills built through academic
-            projects, internships, and international experiences.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Networking & Infrastructure</h3>
-            <div class="skill-list">
-              <span class="skill-pill">VLANs & Sub-interfaces</span>
-              <span class="skill-pill">linux </span>
-
-              <span class="skill-pill">OSPF · RIP</span>
-              <span class="skill-pill">Static Routing</span>
-              <span class="skill-pill">ACL · NAT · PAT</span>
-              <span class="skill-pill">DHCP · DNS</span>
-              <span class="skill-pill">Cisco · Huawei basics</span>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <h3>Security & SOC</h3>
-            <div class="skill-list">
-              <span class="skill-pill">Suricata / Snort</span>
-              <span class="skill-pill">pfSense firewall</span>
-              <span class="skill-pill">Graylog</span>
-              <span class="skill-pill">Elasticsearch</span>
-              <span class="skill-pill">Grafana</span>
-              <span class="skill-pill">Virtual Machines</span>
-              <span class="skill-pill">Log analysis</span>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <h3>Web Development</h3>
-            <div class="skill-list">
-              <span class="skill-pill">HTML · CSS</span>
-              <span class="skill-pill">JavaScript</span>
-              <span class="skill-pill">PHP (modular)</span>
-              <span class="skill-pill">MySQL</span>
-              <span class="skill-pill">Symfony</span>
-
-              <span class="skill-pill">Authentication</span>
-              <span class="skill-pill">Admin dashboards</span>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <h3>Soft Skills & Languages</h3>
-            <div class="skill-list">
-              <span class="skill-pill">Customer service</span>
-              <span class="skill-pill">Problem-solving</span>
-              <span class="skill-pill">Teamwork & leadership</span>
-              <span class="skill-pill">Adaptability</span>
-              <span class="skill-pill">EN · FR · AR </span>
-              <span class="skill-pill">International mindset</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects">
-        <div class="section-header">
-          <div class="section-kicker">Projects</div>
-          <h2 class="section-title">Hands-on <span>Experience</span></h2>
-          <p class="section-description">
-            A selection of academic and personal projects that combine networking, cybersecurity, and web
-            development.
-          </p>
-        </div>
-           <!-- TUNISIE TELECOM PROJECT -->
-                <div class="projects-grid">
-
-<article class="project-card">
-  <div class="project-label">Networking · Internship</div>
-  <h3>Network Security & Wi-Fi Hardening</h3>
-  <div class="project-meta">
-    Internship at Tunisie Telecom focused on securing wireless networks and implementing server-based authentication.
+<header>
+  <div class="nav">
+    <strong>Wiem Zoghlami</strong>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-  <div class="project-tags">
-    <span>Ubuntu Server</span>
-    <span>LDAP / AAA</span>
-    <span>Kali Linux</span>
-    <span>Wireshark</span>
-    <span>Firewall / IDS</span>
-  </div>
-  <p>
-    Currently working on securing enterprise Wi-Fi networks using server-side authentication, firewall rules,
-    and IDS monitoring. Conducting vulnerability assessments, documenting attack scenarios, and proposing
-    mitigation strategies. The project combines practical networking, cybersecurity, and monitoring skills.
-  </p>
-</article>
+</header>
 
-          <!-- SOC PROJECT -->
-          <article class="project-card">
-            <div class="project-label">Security · Final Year Project</div>
-            <h3>Mini-SOC (Security Operations Center)</h3>
-            <div class="project-meta">
-              Open-source tools to monitor, detect, and visualize suspicious network activity.
-            </div>
-            <div class="project-tags">
-              <span>Suricata / Snort</span>
-              <span>Graylog</span>
-              <span>Elasticsearch</span>
-              <span>Grafana</span>
-              <span>pfSense</span>
-            </div>
-            <p>
-              Implemented a mini SOC using virtual machines, IDS/IPS rules, firewall policies,
-              and centralized logging. Built dashboards to track alerts and traffic patterns, and documented
-              attack scenarios and remediation steps.
-            </p>
-          </article>
+<div class="container">
 
-          <!-- WAN PROJECT -->
-          <article class="project-card">
-            <div class="project-label">Networking · Internship</div>
-            <h3>WAN Network for Enterprise Services</h3>
-            <div class="project-meta">
-              Internship at the National Computing Center, designing and configuring a WAN with dynamic routing.
-            </div>
-            <div class="project-tags">
-              <span>VLANs</span>
-              <span>OSPF</span>
-              <span>ACL / NAT</span>
-              <span>DHCP · DNS</span>
-            </div>
-            <p>
-              Designed a network connecting two routers via a serial link, each linked to switches and segmented
-              into VLANs for employees, accounting, and management. Ensured connectivity, security, and clear
-              documentation of the topology.
-            </p>
-          </article>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Junior <span>IT & Network Engineer</span></h1>
+      <p>
+        Tunisian IT engineering student with strong foundations in networking,
+        cybersecurity (SOC), and technical support. Erasmus student preparing
+        mobility to Portugal.
+      </p>
 
-          <!-- WEB PROJECT -->
-          <article class="project-card">
-            <div class="project-label">Web · Personal Project</div>
-            <h3>Community Web Application</h3>
-            <div class="project-meta">
-              Multi-page platform for a passion-based community with forums, events and admin tools.
-            </div>
-            <div class="project-tags">
-              <span>HTML · CSS · JS</span>
-              <span>PHP</span>
-              <span>MySQL</span>
-            </div>
-            <p>
-              Built a web app with user registration, login, discussion forums, events, and an admin panel.
-              Implemented a co-admin role with permissions to manage content and members, and organized the PHP
-              code into reusable components.
-            </p>
-          </article>
-        </div>
-      </section>
-      
-
-      <!-- EDUCATION -->
-      <section id="education">
-        <div class="section-header">
-          <div class="section-kicker">Background</div>
-          <h2 class="section-title">Education</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-card">
-            <div class="timeline-dates">2024 – ongoing</div>
-            <div class="timeline-title">Engineering Cycle – Computer Science</div>
-            <div class="timeline-subtitle">MIT Polytech · Tunisia</div>
-            <ul>
-              <li>Advanced topics in networking, systems, and software.</li>
-              <li>Vice-President of Enactus, leading student projects.</li>
-              <li>Preparing Erasmus mobility to Portugal (IPCB, 2026).</li>
-            </ul>
-          </article>
-
-          <article class="timeline-card">
-            <div class="timeline-dates">2021 – 2024</div>
-            <div class="timeline-title">Bachelor’s in Information Technology</div>
-            <div class="timeline-subtitle">ISET Radès · Tunisia</div>
-            <ul>
-              <li>Specialized in computer networks and systems administration.</li>
-              <li>Final year project: implementation of a mini Security Operations Center.</li>
-              <li>Hands-on labs with routing, switching and basic security.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-card">
-            <div class="timeline-dates">2023</div>
-            <div class="timeline-title">Erasmus+ Mobility – IT Studies</div>
-            <div class="timeline-subtitle">University of Piraeus · Greece</div>
-            <ul>
-              <li>Studied with international students from various countries.</li>
-              <li>Improved communication, adaptability, and independence.</li>
-              <li>Strengthened love for multicultural and European environments.</li>
-            </ul>
-          </article>
-
-         <article class="timeline-card">
-  <div class="timeline-dates">2026</div>
-  <div class="timeline-title">Erasmus+ Mobility – IT Studies</div>
-  <div class="timeline-subtitle">Polytechnic Institute of Castelo Branco</div>
-  <ul>
-    <li>Expected availability: 16 February 2026 – July 2026</li>
-  </ul>
-  </article>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact">
-        <div class="section-header">
-          <div class="section-kicker">Contact</div>
-          <h2 class="section-title">Let’s <span>Work Together</span></h2>
-          <p class="section-description">
-            Open to internships ,part-time & full-time roles in IT support, networking, and cybersecurity in Portugal,
-            especially opportunities that can lead to a long-term collaboration.
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <!-- LEFT: text + info -->
-          <div>
-            <p>
-              If my profile matches what you’re looking for, I would be happy to discuss how I can contribute
-              to your team. I’m particularly interested in roles that combine technical work, troubleshooting,
-              and interaction with users.
-            </p>
-            <p>
-              I’m available in <strong>Portugal from February 2026</strong> and open to both internships and
-              junior positions.
-            </p>
-
-            <ul class="contact-list">
-              <li>
-                <div class="contact-label">Email</div>
-                <div>📧 <a href="mailto:zoghlamiwiiem@gmail.com">zoghlamiwiiem@gmail.com</a></div>
-              </li>
-
-              <li>
-                <div class="contact-label">LinkedIn</div>
-                <div>💼 
-                  <a href="https://www.linkedin.com/in/wi-zgh/" target="_blank" rel="noopener">
-                    linkedin.com/in/wi-zgh
-                  </a>
-                </div>
-              </li>
-
-              <li>
-                <div class="contact-label">Location</div>
-                <div>🌍 Tunisia → Castelo Branco, Portugal (Erasmus Feb–Jul 2026)</div>
-              </li>
-
-              <li>
-                <div class="contact-label">Languages</div>
-                <div class="chip-inline">
-                  <span>Arabic (native)</span>
-                  <span>English (fluent)</span>
-                  <span>French (fluent)</span>
-                  <span>Portuguese (basics)</span>
-                </div>
-              </li>
-
-              <li style="margin-top:6px;">
-                <div class="contact-label">Next step</div>
-                <div>📎 CV & references available on request</div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- RIGHT: form -->
-          <div>
-            <form class="contact-form" action="https://formspree.io/f/mangpzza" method="POST">
-              <div class="form-row">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required>
-              </div>
-
-              <div class="form-row">
-                <label for="email">Email</label>
-                <input id="email" name="_replyto" type="email" placeholder="your@email.com" required>
-              </div>
-
-              <div class="form-row">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-              </div>
-
-              <button type="submit" class="submit-btn">Send message</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        © <span id="year"></span> · Designed by Wiem Zoghlami · Built with love for networks, security & people.
-      </footer>
+      <div class="badges">
+        <span class="badge">Networking</span>
+        <span class="badge">Cybersecurity</span>
+        <span class="badge">SOC</span>
+        <span class="badge">Web Development</span>
+        <span class="badge">Erasmus+</span>
+      </div>
     </div>
-  </main>
 
-  <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <div class="hero-card">
+      <h3>Profile Snapshot</h3>
+      <ul>
+        <li>🎓 Engineering Cycle – Computer Science</li>
+        <li>🌍 Erasmus Portugal (Feb–Jul 2026)</li>
+        <li>🛡️ Networking & Security Focus</li>
+        <li>🗣️ EN · FR · AR · PT (basic)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="section-desc">
+      Academic and internship projects combining networking, security, and real-world practice.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <small>Internship · Tunisie Telecom</small>
+        <h3>Network Security & Wi-Fi Hardening</h3>
+        <div class="tags">
+          <span class="tag">Ubuntu Server</span>
+          <span class="tag">LDAP / AAA</span>
+          <span class="tag">Kali Linux</span>
+          <span class="tag">Wireshark</span>
+        </div>
+        <p>
+          Securing enterprise Wi-Fi using server-based authentication, firewall rules,
+          IDS monitoring, and vulnerability assessments.
+        </p>
+      </div>
+
+      <div class="card">
+        <small>Final Year Project</small>
+        <h3>Mini SOC (Security Operations Center)</h3>
+        <div class="tags">
+          <span class="tag">Suricata</span>
+          <span class="tag">Graylog</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">pfSense</span>
+        </div>
+        <p>
+          Built a mini SOC with centralized logging, IDS alerts, dashboards,
+          and documented attack scenarios.
+        </p>
+      </div>
+
+      <div class="card">
+        <small>Internship</small>
+        <h3>Enterprise WAN Network</h3>
+        <div class="tags">
+          <span class="tag">VLAN</span>
+          <span class="tag">OSPF</span>
+          <span class="tag">ACL / NAT</span>
+        </div>
+        <p>
+          Designed a WAN connecting routers and switches with segmented VLANs
+          and dynamic routing.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Networking</h3>
+        <p>VLANs, OSPF, RIP, ACL, NAT, DHCP, DNS</p>
+      </div>
+      <div class="card">
+        <h3>Security</h3>
+        <p>IDS/IPS, SOC tools, Firewalls, Log analysis</p>
+      </div>
+      <div class="card">
+        <h3>Web</h3>
+        <p>HTML, CSS, JavaScript, PHP, MySQL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Engineering Cycle – Computer Science</h3>
+        <small>MIT Polytech · Tunisia</small>
+      </div>
+      <div class="card">
+        <h3>Bachelor in IT</h3>
+        <small>ISET Radès</small>
+      </div>
+      <div class="card">
+        <h3>Erasmus+</h3>
+        <small>Castelo Branco · Portugal (2026)</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>📧 zoghlamiwiiem@gmail.com</p>
+      <p>💼 <a href="https://www.linkedin.com/in/wi-zgh/" target="_blank">LinkedIn Profile</a></p>
+      <p>🌍 Tunisia → Portugal</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 · Wiem Zoghlami
+  </footer>
+
+</div>
+
 </body>
 </html>
-
-
-
-
-
-
-
